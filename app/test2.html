@@ -1,0 +1,53 @@
+<html ng-app="myApp">  
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>Getting Started With ngGrid Example</title>
+		<link href="css/bootstrap/bootstrap.css" rel="stylesheet" /> 
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/angular.ng-grid/2.0.13/ng-grid.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/angular.ng-grid/2.0.13/ng-grid.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.24/jquery.autocomplete.min.js"></script>
+        <script type="text/javascript" src="js/controllers/main.js"></script>
+    </head>
+    <body ng-controller="MyCtrl">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="img/wcLogo_mini.png" style="margin-top:-10px;"></a>
+      <ul class="nav navbar-nav">
+        <li><a href="test.html">Test</a></li>
+        <li><a href="test2.html">Test2</a></li>
+        </ul>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div class="main" >
+      <div class="container">
+      <div class="jumbotron">
+        <h2 style="text-align: center;">Welcome to Time Log application!</h2></div>
+        <div class="gridStyle" ng-grid="gridOptions">
+        </div>
+		<input type="text" id="query" class="text-field valid" autocomplete="off" placeholder="Search here">
+		 <div>{{data}}</div>
+	  <div shadow="data">
+		<input ng-model="data">
+		<button ng-click="commit()">save</button>
+	  </div>
+	 </div>
+	</div>
+		
+    </body>
+</html>
